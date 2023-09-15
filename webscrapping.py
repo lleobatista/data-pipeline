@@ -10,11 +10,9 @@ datalist = []
 ##function to scrape the website
 def scrape_site():
 
-    ##drivers for Firefox browser
     options = webdriver.FirefoxOptions()
-    ##not showing the browser on
     options.headless = True
-    ##setting the options
+
     driver = webdriver.Firefox(options=options)
 
     categories = ['travel_2',
@@ -112,9 +110,13 @@ def scrape_site():
     ##close the Firefox   
     driver.close()
 
+from sys import path
+print(path)
+print("\n \t Starting Scraping  \n")
 scrape_site()
 
 #making a data frame with json 
 df = pd.DataFrame(datalist)
 ##saving as CSV file
 df.to_csv('data_book.csv', index = False, sep=';')
+print("Finish!")
