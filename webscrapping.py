@@ -15,12 +15,6 @@ def scrape_site():
 
     driver = webdriver.Firefox(options=options)
 
-    #options = webdriver.FirefoxOptions()
-    ##not showing the browser on
-    #options.headless = True
-    ##setting the options
-    #driver = webdriver.Firefox(options=options)
-
     categories = ['travel_2',
     'mystery_3',
     'historical-fiction_4',
